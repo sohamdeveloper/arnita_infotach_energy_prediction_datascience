@@ -20,9 +20,8 @@ for col in numeric_cols:
 
 df = df.fillna(df.mean(numeric_only=True))
 
-print("\nColumns after cleaning:\n", df.columns.tolist())
-print("\nPreview of cleaned data:\n", df.head())
-print("\nMissing values check:\n", df.isnull().sum())
+print("\n columns after cleaning: \n", df.columns.tolist())
+print("\n preview of cleaned data: \n", df.head())
+print("\n missing values check: \n", df.isnull().sum())
 
 df.to_csv("cleaned_energy_consumption.csv", index=False)
-print("\n✔ Cleaned dataset saved as 'cleaned_energy_consumption.csv'")
